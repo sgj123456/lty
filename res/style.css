@@ -19,9 +19,6 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: auto;
-  height: 75%;
-  width: calc(100% + 20px);
 }
 header {
   left: 3;
@@ -53,13 +50,14 @@ footer #playerProgress .time {
 }
 footer #playerProgress .progressbar {
   -webkit-box-flex: 3;
+  width: 100%;
   height: 3px;
   background-color: #cfcbd0;
   margin-top: 8px;
 }
 footer #playerProgress .progressbar .bar {
   display: block;
-  width: 0;
+  width: 100%;
   height: 100%;
   background: #52a9eb;
   position: relative;
@@ -116,7 +114,7 @@ footer #playerCtrl > div .button.collect {
   background-image: url("images/pcrl/collect.png");
 }
 header .playing_info {
-  width: 0%;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   color: #ffffff;
@@ -137,7 +135,6 @@ header .playing_info .singer {
   bottom: 100px;
   top: 45px;
   width: 600px;
-  overflow: hidden;
   height: 800px;
 }
 .content > .panelGroup {
@@ -164,6 +161,9 @@ header .playing_info .singer {
 }
 .panel.playlist .music_list {
   color: #ffffff;
+  overflow: auto;
+  width: 100%;
+  height: calc(100% + 20px);
 }
 .panel.playlist .music_list li {
   display: -webkit-box;
