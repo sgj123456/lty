@@ -13,7 +13,7 @@ onMounted(
     const variation = {
       img: {
         "start": 0,
-        "end": 5,
+        "end": 10,
         "step": 1,
         "time": 3000,
         "relapse": true,
@@ -68,15 +68,13 @@ function paneClick() {
   <el-tabs tab-position="left" :style="{ height: 'fit-content' }" @tab-click="tapclick" class="demo-tabs">
     <el-tab-pane label="主页" class="pane">
       <h1 style="text-shadow: none;">华风夏韵 洛水天依</h1>
-      <span style="left: -2em !important">
-        <strong style="text-shadow: none;"> <em>——</em> 洛天依诞生<em>10</em>周年纪念</strong>&nbsp&nbsp
-      </span>
+      <strong style="text-shadow: none;"> <em>——</em> 洛天依诞生<em>10</em>周年纪念</strong>&nbsp&nbsp
     </el-tab-pane>
     <el-tab-pane :label="value.name" v-for="(value) of music" class="pane">
       <LrcVue v-bind="value"></LrcVue>
     </el-tab-pane>
   </el-tabs>
-  <img :src="img" style="height: 80%;position: fixed;right: 0;top: 20%;z-index: -1;" />
+  <img :src="img" style="height: 50rem;position: fixed;right: 0;top: 20rem;z-index: -1;" />
   <audio :src="audio" autoplay></audio>
 </template>
 <style>
@@ -87,16 +85,35 @@ function paneClick() {
   text-align: right;
 }
 
-.el-tabs--left .el-tabs__item.is-left {
-  font-weight: 900;
+.el-tabs--left .el-tabs__header.is-left {
+  float: right;
+  margin-bottom: 0;
+  margin-right: 0;
+  text-align: left;
+  width: 8rem;
+  font-size: medium !important;
 }
 
 .el-tabs--right .el-tabs__content,
 .el-tabs--left .el-tabs__content {
-  font-size: 1.35rem;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 700;
   height: 100%;
   width: 100%;
+}
+
+.el-tabs__item {
+  text-align: left !important;
+  padding: 0 0.5rem;
+  height: var(--el-tabs-header-height);
+  box-sizing: border-box;
+  line-height: var(--el-tabs-header-height);
+  display: inline-block;
+  list-style: none;
+  font-size: var(--el-font-size-base);
+  font-weight: 700;
+  color: var(--el-text-color-primary);
+  position: relative;
 }
 
 .demo-tabs {
