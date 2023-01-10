@@ -74,7 +74,7 @@ function paneClick() {
       <LrcVue v-bind="value"></LrcVue>
     </el-tab-pane>
   </el-tabs>
-  <img :src="img" style="height: 50rem;position: fixed;right: 0;top: 20rem;z-index: -1;" />
+  <img :src="img" style="height: 50rem;position: fixed;right: -5rem;top: 20rem;z-index: -1;" />
   <audio :src="audio" autoplay></audio>
 </template>
 <style>

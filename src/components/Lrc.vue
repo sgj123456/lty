@@ -91,6 +91,6 @@ li {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-shadow: black -0.25rem 0.5rem 0.25rem, black -0.25rem -0.25rem 0.25rem;
+    text-shadow: black -0.125em 0.125em 0.125em, black 0.125em 0.125em 0.125em;
 }
 </style>
